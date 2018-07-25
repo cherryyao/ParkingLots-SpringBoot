@@ -3,10 +3,7 @@ package com.example.demo.controller;
 import com.example.demo.Service.ParkingLotsService;
 import com.example.demo.domain.ParkingLots;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -21,5 +18,11 @@ public class ParkingLotsController {
     @GetMapping("/ParkingLots")
     public List<ParkingLots> getAllParkingLots(){
         return parkingLotsService.getAllParkingLots();
+    }
+
+
+    @DeleteMapping("/ParkingLots/{lotId}")
+    public ParkingLots deleteParkingLots(@PathVariable int lotId){
+        return parkingLotsService.deleteParkingLots(lotId);
     }
 }

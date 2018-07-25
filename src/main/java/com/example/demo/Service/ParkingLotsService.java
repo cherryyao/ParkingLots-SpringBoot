@@ -20,6 +20,9 @@ public class ParkingLotsService implements ParkingLotsDao {
         return DB.getAllParkingLots();
     }
 
-
+    @Override
+    public ParkingLots deleteParkingLots(int lotId){
+        return DB.deleteParkingLot(lotId);
+    }
 
 }

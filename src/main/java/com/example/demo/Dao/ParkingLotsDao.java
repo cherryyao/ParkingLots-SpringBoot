@@ -7,4 +7,6 @@ import java.util.List;
 public interface ParkingLotsDao {
     ParkingLots addParkingLot(ParkingLots parkingLots);
     List<ParkingLots> getAllParkingLots();
+
+    ParkingLots deleteParkingLots(int lotId);
 }

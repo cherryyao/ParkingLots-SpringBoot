@@ -12,6 +12,8 @@ public interface ParkingBoysDao {
 
     ParkingBoys arrangeParkingLotToParkingBoy(int boyId, int lotId);
 
+    ParkingBoys deleteParkingBoy(int boyId);
+
 
     //List<ParkingBoys> arrangeParkingLotToBoys(ParkingBoys parkingBoys, int lotId);
 }

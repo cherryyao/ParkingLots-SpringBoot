@@ -20,6 +20,11 @@ public class ParkingBoysController {
         return parkingBoysService.addParkingBoy(parkingBoys);
     }
 
+    @DeleteMapping("/ParkingBoys/{boyId}")
+    public ParkingBoys deleteParkingBoy(@PathVariable int boyId){
+        return parkingBoysService.deleteParkingBoy(boyId);
+    }
+
     @GetMapping("/ParkingBoys")
     public List<ParkingBoys> getAllParkingBoy(){
         return parkingBoysService.getAllParkingBoy();
@@ -29,6 +34,8 @@ public class ParkingBoysController {
     public ParkingBoys arrangeParkingLotToParkingBoy(@PathVariable int boyId,@PathVariable int lotId){
         return parkingBoysService.arrangeParkingLotToParkingBoy(boyId,lotId);
     }
+
+    
 
 
 }

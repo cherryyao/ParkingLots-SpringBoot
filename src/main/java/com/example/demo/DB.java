@@ -38,4 +38,16 @@ public class DB {
         parkingBoys.setParkingLotsList(parkingLotsList);
         return parkingBoys;
     }
+
+    public static ParkingBoys deleteParkingBoy(int boyId) {
+        ParkingBoys deleteBoy = parkingBoysMap.get(boyId);
+        parkingBoysMap.remove(boyId);
+        return deleteBoy;
+    }
+
+    public static ParkingLots deleteParkingLot(int lotId) {
+        ParkingLots deleteLot = parkingLotsMap.get(lotId);
+        parkingLotsMap.remove(lotId);
+        return deleteLot;
+    }
 }

@@ -25,6 +25,11 @@ public class ParkingBoysService implements ParkingBoysDao {
         return DB.arrangeParkingLotToParkingBoy(boyId,lotId);
     }
 
+    @Override
+    public ParkingBoys deleteParkingBoy(int boyId){
+        return DB.deleteParkingBoy(boyId);
+    }
+
 
 
 
