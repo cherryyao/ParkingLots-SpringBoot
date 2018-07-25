@@ -56,7 +56,6 @@ public class DB {
     }
 
     public static Receipt parking(Car car) {
-
         if (CarMap.keySet().size()==0){
             Receipt receipt1 =new Receipt(receiptIdKey,true);
             CarMap.put(receipt1,car);
@@ -73,13 +72,16 @@ public class DB {
     }
 
     public static Car unpark(int receiptId) {
-        if(CarMap.containsKey(receiptId)){
+        //if(CarMap.containsKey(receiptId)){
             for (Receipt receipt :CarMap.keySet()){
-                receipt.setStatus(false);
+                if (receipt.getReceiptId()==receiptId) {
+                    receipt.setStatus(false);
+                    Car car = CarMap.get(receipt);
+                    return car;
+                }
             }
-            Car car = CarMap.get(receiptId);
-            return car;
-        }
-        return null;
+            return null;
+        //}
+
     }
 }
