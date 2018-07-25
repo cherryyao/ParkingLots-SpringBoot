@@ -19,8 +19,7 @@ public class ParkingBoysController {
     public List<ParkingBoys> addParkingBoy(@RequestBody ParkingBoys parkingBoys){
         int boyId = parkingBoys.getBoyId();
         String name = parkingBoys.getName();
-        List<ParkingLots> parkingLotsList = parkingBoys.getParkingLotsList();
-        return parkingBoysService.addParkingBoy(boyId,name,parkingLotsList);
-
+        //List<ParkingLots> parkingLotsList = parkingBoys.getParkingLotsList();
+        return parkingBoysService.addParkingBoy(boyId,name);
     }
 }

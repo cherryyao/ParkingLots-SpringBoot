@@ -6,5 +6,5 @@ import com.example.demo.domain.ParkingLots;
 import java.util.List;
 
 public interface ParkingBoysDao {
-    List<ParkingBoys> addParkingBoy(int boyId, String name, List<ParkingLots> parkingLotsList);
+    List<ParkingBoys> addParkingBoy(int boyId, String name);
 }

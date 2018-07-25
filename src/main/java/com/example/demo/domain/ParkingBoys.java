@@ -10,6 +10,11 @@ public class ParkingBoys {
 
     public ParkingBoys(){}
 
+    public ParkingBoys(int boyId,String name){
+        this.boyId = boyId;
+        this.name = name;
+    }
+
     public ParkingBoys(int boyId, String name, List<ParkingLots> parkingLotsList) {
         this.boyId = boyId;
         this.name = name;
