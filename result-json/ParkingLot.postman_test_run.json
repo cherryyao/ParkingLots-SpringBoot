@@ -1,0 +1,434 @@
+{
+	"id": "45077e98-2779-4d8c-8e95-f83bc2ab02bc",
+	"name": "ParkingLot",
+	"allTests": [],
+	"timestamp": "2018-07-25T15:02:08.008Z",
+	"collection_id": "d2692b4b-7c36-46ce-8923-560bdaed59a4",
+	"folder_id": 0,
+	"target_type": "collection",
+	"environment_id": "0",
+	"data": [],
+	"delay": 400,
+	"count": 1,
+	"collection": {
+		"id": "d2692b4b-7c36-46ce-8923-560bdaed59a4",
+		"name": "ParkingLot",
+		"description": null,
+		"auth": null,
+		"events": null,
+		"variables": null,
+		"order": [
+			"8a89e13a-9899-40fb-ad36-39a3db8325bd",
+			"6c3a5bc0-2306-4095-a269-8052aea74981",
+			"b555c447-75b5-41c4-9bca-48ad8e9ee622",
+			"de5d1613-59f3-4a5a-95ff-5a4572dc9e03",
+			"0bf354ec-8c25-4901-87a1-72a5000e699b",
+			"42c3a480-9225-47ed-bb6b-c18d6143b13a",
+			"c4d9c740-9768-44ec-a1f7-f2075f6ccf8f"
+		],
+		"folders_order": [],
+		"owner": "0",
+		"permissions": {},
+		"favorite": false,
+		"shared": false,
+		"type": "collection",
+		"depth": 0
+	},
+	"folder": null,
+	"environment": null,
+	"globals": [],
+	"results": [
+		{
+			"name": "add ParkingBoy",
+			"id": "8a89e13a-9899-40fb-ad36-39a3db8325bd",
+			"url": "http://localhost:8080/ParkingBoys",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"name": "add ParkingBoy successfully",
+				"status": "pass"
+			},
+			"testPassFailCounts": {
+				"add ParkingBoy successfully": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"239"
+			],
+			"allTests": [
+				{
+					"add ParkingBoy successfully": true
+				}
+			],
+			"time": "239",
+			"totalRequestTime": "239",
+			"iterationResults": {}
+		},
+		{
+			"name": "add ParkingLot",
+			"id": "6c3a5bc0-2306-4095-a269-8052aea74981",
+			"url": "http://localhost:8080/ParkingLots",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"name": "add ParkingLot successfully",
+				"status": "pass"
+			},
+			"testPassFailCounts": {
+				"add ParkingLot successfully": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"7"
+			],
+			"allTests": [
+				{
+					"add ParkingLot successfully": true
+				}
+			],
+			"time": "7",
+			"totalRequestTime": "7",
+			"iterationResults": {}
+		},
+		{
+			"name": "arrage ParkingLot to ParkingBoy",
+			"id": "b555c447-75b5-41c4-9bca-48ad8e9ee622",
+			"url": "http://localhost:8080/ParkingBoys/1/1",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"name": "add ParkingLot to ParkingBoy",
+				"status": "pass"
+			},
+			"testPassFailCounts": {
+				"add ParkingLot to ParkingBoy": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"11"
+			],
+			"allTests": [
+				{
+					"add ParkingLot to ParkingBoy": true
+				}
+			],
+			"time": "11",
+			"totalRequestTime": "11",
+			"iterationResults": {}
+		},
+		{
+			"name": "park a car get a receipt",
+			"id": "de5d1613-59f3-4a5a-95ff-5a4572dc9e03",
+			"url": "http://localhost:8080/Receipt",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"name": "park a car get a receipt",
+				"status": "pass"
+			},
+			"testPassFailCounts": {
+				"park a car get a receipt": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"7"
+			],
+			"allTests": [
+				{
+					"park a car get a receipt": true
+				}
+			],
+			"time": "7",
+			"totalRequestTime": "7",
+			"iterationResults": {}
+		},
+		{
+			"name": "unpark",
+			"id": "0bf354ec-8c25-4901-87a1-72a5000e699b",
+			"url": "http://localhost:8080/Receipt/1",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"name": "unpark a car",
+				"status": "pass"
+			},
+			"testPassFailCounts": {
+				"unpark a car": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"7"
+			],
+			"allTests": [
+				{
+					"unpark a car": true
+				}
+			],
+			"time": "7",
+			"totalRequestTime": "7",
+			"iterationResults": {}
+		},
+		{
+			"name": "showOrder",
+			"id": "42c3a480-9225-47ed-bb6b-c18d6143b13a",
+			"url": "http://localhost:8080/Order",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"name": "park a car get a receipt",
+				"status": "pass"
+			},
+			"testPassFailCounts": {
+				"park a car get a receipt": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"8"
+			],
+			"allTests": [
+				{
+					"park a car get a receipt": true
+				}
+			],
+			"time": "8",
+			"totalRequestTime": "8",
+			"iterationResults": {}
+		},
+		{
+			"name": "robbingOrder",
+			"id": "c4d9c740-9768-44ec-a1f7-f2075f6ccf8f",
+			"url": "http://localhost:8080/Order/1",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"name": "robbing a car",
+				"status": "pass"
+			},
+			"testPassFailCounts": {
+				"robbing a car": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"5"
+			],
+			"allTests": [
+				{
+					"robbing a car": true
+				}
+			],
+			"time": "5",
+			"totalRequestTime": "5",
+			"iterationResults": {}
+		}
+	],
+	"totalPass": 7,
+	"totalFail": 0,
+	"totalTime": 284,
+	"lifecycle": "done",
+	"requests": [
+		{
+			"name": "add ParkingBoy",
+			"id": "8a89e13a-9899-40fb-ad36-39a3db8325bd",
+			"url": "http://localhost:8080/ParkingBoys",
+			"time": "2018-07-25T15:02:08.008Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"add ParkingBoy successfully": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "add ParkingLot",
+			"id": "6c3a5bc0-2306-4095-a269-8052aea74981",
+			"url": "http://localhost:8080/ParkingLots",
+			"time": "2018-07-25T15:02:08.008Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"add ParkingLot successfully": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "arrage ParkingLot to ParkingBoy",
+			"id": "b555c447-75b5-41c4-9bca-48ad8e9ee622",
+			"url": "http://localhost:8080/ParkingBoys/1/1",
+			"time": "2018-07-25T15:02:08.008Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"add ParkingLot to ParkingBoy": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "park a car get a receipt",
+			"id": "de5d1613-59f3-4a5a-95ff-5a4572dc9e03",
+			"url": "http://localhost:8080/Receipt",
+			"time": "2018-07-25T15:02:08.008Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"park a car get a receipt": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "unpark",
+			"id": "0bf354ec-8c25-4901-87a1-72a5000e699b",
+			"url": "http://localhost:8080/Receipt/1",
+			"time": "2018-07-25T15:02:08.008Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"unpark a car": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "showOrder",
+			"id": "42c3a480-9225-47ed-bb6b-c18d6143b13a",
+			"url": "http://localhost:8080/Order",
+			"time": "2018-07-25T15:02:08.008Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"park a car get a receipt": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "robbingOrder",
+			"id": "c4d9c740-9768-44ec-a1f7-f2075f6ccf8f",
+			"url": "http://localhost:8080/Order/1",
+			"time": "2018-07-25T15:02:08.008Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"robbing a car": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		}
+	],
+	"synced": false
+}

@@ -1,24 +1,22 @@
 package com.example.demo.domain;
 
-import com.sun.org.apache.xpath.internal.operations.Or;
-
 public class Order {
-    private int OrderId;
+    private int orderId;
     private boolean status;
 
     public Order(){}
 
     public Order(int orderId, boolean status) {
-        OrderId = orderId;
+        this.orderId = orderId;
         this.status = status;
     }
 
     public int getOrderId() {
-        return OrderId;
+        return orderId;
     }
 
     public void setOrderId(int orderId) {
-        OrderId = orderId;
+        this.orderId = orderId;
     }
 
     public boolean isStatus() {

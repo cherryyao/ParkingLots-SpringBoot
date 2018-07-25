@@ -103,7 +103,7 @@ public class DB {
         for (Order order :OrderCarMap.keySet()){
             if (order.getOrderId()==orderId) {
                 order.setStatus(false);
-                Car car = CarMap.get(order);
+                Car car = OrderCarMap.get(order);
                 return car;
             }
         }
