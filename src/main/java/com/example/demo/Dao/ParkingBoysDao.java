@@ -10,6 +10,7 @@ public interface ParkingBoysDao {
 
     List<ParkingBoys> getAllParkingBoy();
 
+    ParkingBoys arrangeParkingLotToParkingBoy(int boyId, int lotId);
 
 
     //List<ParkingBoys> arrangeParkingLotToBoys(ParkingBoys parkingBoys, int lotId);

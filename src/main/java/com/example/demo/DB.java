@@ -22,7 +22,7 @@ public class DB {
     public static ParkingLots addParkingLots(ParkingLots parkingLots){
         parkingLots.setLotId(getParkingLotIdKey);
         parkingLotsMap.put(getParkingLotIdKey++,parkingLots);
-       return parkingLots;
+        return parkingLots;
     }
 
     public static List<ParkingLots> getAllParkingLots(){
@@ -30,4 +30,12 @@ public class DB {
     }
 
 
+    public static ParkingBoys arrangeParkingLotToParkingBoy(int boyId, int lotId) {
+        ParkingBoys parkingBoys = parkingBoysMap.get(boyId);
+        ParkingLots parkingLots = parkingLotsMap.get(lotId);
+        List<ParkingLots> parkingLotsList = new ArrayList<>();
+        parkingLotsList.add(parkingLots);
+        parkingBoys.setParkingLotsList(parkingLotsList);
+        return parkingBoys;
+    }
 }

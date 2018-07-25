@@ -25,5 +25,10 @@ public class ParkingBoysController {
         return parkingBoysService.getAllParkingBoy();
     }
 
+    @PutMapping("/ParkingBoys/{boyId}/{lotId}")
+    public ParkingBoys arrangeParkingLotToParkingBoy(@PathVariable int boyId,@PathVariable int lotId){
+        return parkingBoysService.arrangeParkingLotToParkingBoy(boyId,lotId);
+    }
+
 
 }

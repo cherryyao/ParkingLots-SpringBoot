@@ -20,5 +20,12 @@ public class ParkingBoysService implements ParkingBoysDao {
         return DB.getAllParkingBoys();
     }
 
+    @Override
+    public ParkingBoys arrangeParkingLotToParkingBoy(int boyId, int lotId){
+        return DB.arrangeParkingLotToParkingBoy(boyId,lotId);
+    }
+
+
+
 
 }
