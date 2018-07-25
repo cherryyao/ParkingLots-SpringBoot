@@ -6,5 +6,11 @@ import com.example.demo.domain.ParkingLots;
 import java.util.List;
 
 public interface ParkingBoysDao {
-    List<ParkingBoys> addParkingBoy(int boyId, String name);
+    ParkingBoys addParkingBoy(ParkingBoys parkingBoys);
+
+    List<ParkingBoys> getAllParkingBoy();
+
+
+
+    //List<ParkingBoys> arrangeParkingLotToBoys(ParkingBoys parkingBoys, int lotId);
 }

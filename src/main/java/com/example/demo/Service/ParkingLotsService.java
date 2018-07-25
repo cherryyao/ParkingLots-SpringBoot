@@ -1,6 +1,7 @@
 package com.example.demo.Service;
 
 import com.example.demo.Dao.ParkingLotsDao;
+import com.example.demo.domain.ParkingBoys;
 import com.example.demo.domain.ParkingLots;
 import org.springframework.stereotype.Component;
 
@@ -17,5 +18,6 @@ public class ParkingLotsService implements ParkingLotsDao {
         parkingLotsList.add(new ParkingLots(lotId,lotName,size));
         return parkingLotsList;
     }
+
 
 }

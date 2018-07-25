@@ -11,6 +11,10 @@ public class ParkingLots {
         this.size = size;
     }
 
+    public ParkingLots(int lotId){
+        this.lotId = lotId;
+    }
+
     public ParkingLots(){}
 
     public int getLotId() {
