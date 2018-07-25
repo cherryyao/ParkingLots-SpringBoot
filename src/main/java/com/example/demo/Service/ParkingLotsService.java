@@ -14,8 +14,8 @@ public class ParkingLotsService implements ParkingLotsDao {
     private List<ParkingLots> CompaniesList = new ArrayList<>();
 
     @Override
-    public List<ParkingLots> addParkingLot(int lotId, String lotname, int size){
-        CompaniesList.add(new ParkingLots(lotId,lotname,size));
+    public List<ParkingLots> addParkingLot(int lotId, String lotName, int size){
+        CompaniesList.add(new ParkingLots(lotId,lotName,size));
         return CompaniesList;
     }
 

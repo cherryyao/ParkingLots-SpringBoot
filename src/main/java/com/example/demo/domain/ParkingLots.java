@@ -1,34 +1,32 @@
 package com.example.demo.domain;
 
-import java.util.ArrayList;
-
 public class ParkingLots {
-    private int LotId;
-    private String LotName;
+    private int lotId;
+    private String lotName;
     private int size;
 
     public ParkingLots(int lotId, String lotName, int size) {
-        LotId = lotId;
-        LotName = lotName;
+        this.lotId = lotId;
+        this.lotName = lotName;
         this.size = size;
     }
 
     public ParkingLots(){}
 
     public int getLotId() {
-        return LotId;
+        return lotId;
     }
 
     public void setLotId(int lotId) {
-        LotId = lotId;
+        this.lotId = lotId;
     }
 
     public String getLotName() {
-        return LotName;
+        return lotName;
     }
 
     public void setLotName(String lotName) {
-        LotName = lotName;
+        this.lotName = lotName;
     }
 
     public int getSize() {

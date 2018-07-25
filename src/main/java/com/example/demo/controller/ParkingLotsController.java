@@ -13,12 +13,12 @@ import java.util.List;
 public class ParkingLotsController {
     @Autowired
     ParkingLotsService parkingLotsService;
-    @PostMapping("/ParkingBoys")
+    @PostMapping("/ParkingLots")
     public List<ParkingLots> addParkingLot(@RequestBody ParkingLots parkingLots){
-        int LotId = parkingLots.getLotId();
-        String Lotname = parkingLots.getLotName();
+        int lotId = parkingLots.getLotId();
+        String lotName = parkingLots.getLotName();
         int size = parkingLots.getSize();
-        return parkingLotsService.addParkingLot(LotId,Lotname,size);
+        return parkingLotsService.addParkingLot(lotId,lotName,size);
 
     }
 }
