@@ -1,9 +1,6 @@
 package com.example.demo;
 
-import com.example.demo.domain.Car;
-import com.example.demo.domain.ParkingBoys;
-import com.example.demo.domain.ParkingLots;
-import com.example.demo.domain.Receipt;
+import com.example.demo.domain.*;
 
 import java.util.*;
 
@@ -14,6 +11,7 @@ public class DB {
     private static int getParkingLotIdKey=1;
     private static Map<Receipt,Car> CarMap = new LinkedHashMap<>();
     private static int receiptIdKey = 1;
+    private static Map<Order,Car> OrderCarMap = new LinkedHashMap<>();
 
     public static ParkingBoys addParkingBoys(ParkingBoys parkingBoys){
         parkingBoys.setBoyId(parkingBoyIdKey);
@@ -84,4 +82,33 @@ public class DB {
         //}
 
     }
+
+    public static Order showOrder(Car car) {
+        if (OrderCarMap.keySet().size()==0){
+            Order order1 =new Order(receiptIdKey,true);
+            OrderCarMap.put(order1,car);
+            return order1;
+        }else {
+            for (Order order : OrderCarMap.keySet()) {
+                order.setStatus(true);
+                order.setOrderId(receiptIdKey++);
+                OrderCarMap.put(order, car);
+                return order;
+            }
+        }
+        return null;
+    }
+
+    public static Car robbing(int orderId) {
+        for (Order order :OrderCarMap.keySet()){
+            if (order.getOrderId()==orderId) {
+                order.setStatus(false);
+                Car car = CarMap.get(order);
+                return car;
+            }
+        }
+        return null;
+    }
+
+
 }

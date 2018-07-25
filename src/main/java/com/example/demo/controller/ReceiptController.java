@@ -23,9 +23,4 @@ public class ReceiptController {
         return receiptService.unpark(receiptId);
     }
 
-//    @GetMapping("/Receipt")
-//    public Map<Receipt,Car> CarMap(){
-//        return receiptService.getParkList();
-//    }
-
 }
