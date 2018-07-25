@@ -1,7 +1,9 @@
 package com.example.demo;
 
+import com.example.demo.domain.Car;
 import com.example.demo.domain.ParkingBoys;
 import com.example.demo.domain.ParkingLots;
+import com.example.demo.domain.Receipt;
 
 import java.util.*;
 
@@ -10,6 +12,8 @@ public class DB {
     private static int parkingBoyIdKey=1;
     private static Map<Integer,ParkingLots> parkingLotsMap = new LinkedHashMap<>();
     private static int getParkingLotIdKey=1;
+    private static Map<Integer,Car> CarMap = new LinkedHashMap<>();
+    private static int receiptIdKey = 1;
 
     public static ParkingBoys addParkingBoys(ParkingBoys parkingBoys){
         parkingBoys.setBoyId(parkingBoyIdKey);
@@ -49,5 +53,11 @@ public class DB {
         ParkingLots deleteLot = parkingLotsMap.get(lotId);
         parkingLotsMap.remove(lotId);
         return deleteLot;
+    }
+
+    public static Receipt parking(Car car) {
+        Receipt receipt = new Receipt(receiptIdKey);
+        CarMap.put(receiptIdKey++,car);
+        return receipt;
     }
 }

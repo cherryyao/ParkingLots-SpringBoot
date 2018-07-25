@@ -19,10 +19,9 @@ public class ParkingLotsController {
     public List<ParkingLots> getAllParkingLots(){
         return parkingLotsService.getAllParkingLots();
     }
-
-
     @DeleteMapping("/ParkingLots/{lotId}")
     public ParkingLots deleteParkingLots(@PathVariable int lotId){
         return parkingLotsService.deleteParkingLots(lotId);
     }
+
 }
