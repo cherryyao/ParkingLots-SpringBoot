@@ -4,7 +4,9 @@ import com.example.demo.Service.ReceiptService;
 import com.example.demo.domain.Car;
 import com.example.demo.domain.Receipt;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -14,8 +16,12 @@ public class ReceiptController {
 
     @PostMapping("/Receipt")
     public Receipt parking(Car car){
-
         return receiptService.parking(car);
+    }
+
+    @PutMapping("/Receipt/{receiptId}")
+    public Car unpark(@PathVariable int receiptId){
+        return receiptService.unpark(receiptId);
     }
 
 }

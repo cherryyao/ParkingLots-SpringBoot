@@ -12,7 +12,7 @@ public class DB {
     private static int parkingBoyIdKey=1;
     private static Map<Integer,ParkingLots> parkingLotsMap = new LinkedHashMap<>();
     private static int getParkingLotIdKey=1;
-    private static Map<Integer,Car> CarMap = new LinkedHashMap<>();
+    private static Map<Receipt,Car> CarMap = new LinkedHashMap<>();
     private static int receiptIdKey = 1;
 
     public static ParkingBoys addParkingBoys(ParkingBoys parkingBoys){
@@ -56,8 +56,30 @@ public class DB {
     }
 
     public static Receipt parking(Car car) {
-        Receipt receipt = new Receipt(receiptIdKey);
-        CarMap.put(receiptIdKey++,car);
-        return receipt;
+
+        if (CarMap.keySet().size()==0){
+            Receipt receipt1 =new Receipt(receiptIdKey,true);
+            CarMap.put(receipt1,car);
+            return receipt1;
+        }else {
+            for (Receipt receipt : CarMap.keySet()) {
+                receipt.setStatus(true);
+                receipt.setReceiptId(receiptIdKey++);
+                CarMap.put(receipt, car);
+                return receipt;
+            }
+        }
+        return null;
+    }
+
+    public static Car unpark(int receiptId) {
+        if(CarMap.containsKey(receiptId)){
+            for (Receipt receipt :CarMap.keySet()){
+                receipt.setStatus(false);
+            }
+            Car car = CarMap.get(receiptId);
+            return car;
+        }
+        return null;
     }
 }

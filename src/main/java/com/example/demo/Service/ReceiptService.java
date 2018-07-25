@@ -13,4 +13,10 @@ public class ReceiptService implements ReceiptDao {
         return DB.parking(car);
     }
 
+    @Override
+    public Car unpark(int receiptId){
+        return DB.unpark(receiptId);
+        //return null;
+    }
+
 }

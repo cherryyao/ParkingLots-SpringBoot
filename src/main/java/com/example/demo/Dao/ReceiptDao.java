@@ -5,4 +5,6 @@ import com.example.demo.domain.Receipt;
 
 public interface ReceiptDao {
     Receipt parking(Car car);
+
+    Car unpark(int receiptId);
 }
